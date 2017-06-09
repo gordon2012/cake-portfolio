@@ -1,0 +1,18 @@
+language: php
+
+dist: trusty
+
+sudo: false
+
+php:
+  - 7.1
+
+matrix:
+  fast_finish: true
+
+  include:
+    - php: 7.1
+
+script:
+  - composer install
+  - bash ./.travis-deploy.sh

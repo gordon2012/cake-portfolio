@@ -1,0 +1,27 @@
+{
+  "name": "cake-portfolio",
+  "version": "1.0.0",
+  "description": "[Cake Portfolio](http://cake-portfolio.gordonscampinggear.com)",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "dev": "browser-sync start --no-notify -p \"localhost/cake-portfolio\" -f \"src\" \"webroot\" \"config\"",
+    "db" : "mysql -u root cake-portfolio",
+    "ssh": "ssh hg"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gordon2012/cake-portfolio.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gordon2012/cake-portfolio/issues"
+  },
+  "homepage": "https://github.com/gordon2012/cake-portfolio#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.12"
+  }
+}
