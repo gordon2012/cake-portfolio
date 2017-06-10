@@ -56,6 +56,7 @@ class PagesController extends AppController
             $subpage = $path[1];
         }
         $this->set(compact('page', 'subpage'));
+        $this->viewBuilder()->setLayout('pages');
 
         try {
             $this->render(implode('/', $path));

@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+main {
+    flex: 1;
+}
+
+header, footer, header>h3 {
+    background: #2f2f2f;
+    color: whitesmoke;
+}
+
+header, footer, main {
+    padding: 20px;
+}
