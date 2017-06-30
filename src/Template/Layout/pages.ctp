@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?= h($this->fetch('title')) ?></title>
     <?= $this->Html->css('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css') ?>
-    <?= $this->Html->css('main.css') ?>
+    <?= $this->Html->css('main.css?v='.time()) ?>
     <?= $this->fetch('css') ?>
 </head>
 <body>
