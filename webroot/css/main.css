@@ -1,3 +1,4 @@
+/* Debug */
 .r {
     background-color: rgba(255,0,0,0.2);
 }
@@ -6,6 +7,9 @@
 }
 .b {
     background-color: rgba(0,0,255,0.2);
+}
+.mb {
+    border: 3px solid magenta;
 }
 
 /* Reset */
@@ -41,7 +45,6 @@ nav .container {
     padding: 15px 0;
 }
 
-
 section {
     min-height: 110vh;
 }
@@ -52,12 +55,10 @@ section {
     background-color: rgba(0,0,0,0.2);
 }
 
-
 /* New Styles */
 .copy p {
     font-size: 1.5em;
 }
-
 section h1 {
     text-align: center;
     padding-top: 50px;
@@ -67,13 +68,11 @@ section h1 {
 .imgbox {
     padding: 30px 0;
 }
-
 section#about img {
     border-radius: 50%;
     width: 160px;
     margin: 0 auto;
 }
-
 .skills {
     padding: 15px;
     margin-bottom: 100px;
@@ -81,4 +80,44 @@ section#about img {
 .skills h2 {
     margin: 15px;
     padding: 0;
+}
+
+/* Work Section */
+.projects {
+    padding: 0 50px;
+}
+.projects h3 {
+    margin: 0;
+    padding: 0;
+}
+.projects .wrap {
+    padding: 50px;
+}
+
+.projects .item {
+    position: relative;
+}
+.projects .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.projects .overlay:hover {
+    background-color: rgba(0,0,0,0.6);
+    cursor: pointer;
+    text-align: center;
+}
+.projects h3 {
+    color: white;
+    display: none;
+}
+.projects .overlay:hover h3 {
+    display: block;
 }

@@ -23,13 +23,37 @@
 
             <div class="clearfix"></div>
         </div>
-
     </div>
 </section>
 
 <section id="work">
     <h1>My Work</h1>
+
+    <div class="container-fluid r">
+        <div class="row projects b">
+            <?php $projects = [
+                'Camper Leaderboard',
+                'Markdown Previewer',
+                'Calculator',
+                'Random Quote Machine',
+                'Wikipedia Search',
+                'Twitch.tv Status'];
+            ?>
+            <?php foreach($projects as $project): ?>
+                <div class="col-sm-12 col-md-6 col-lg-4 wrap">
+                    <div class="item panel">
+                        <img src="https://place-hold.it/800x600" alt="" class="img-responsive">
+                        <div class="overlay">
+                            <h3><?=$project?></h3>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach ?>
+            <div class="clearfix"></div>
+        </div>
+    </div>
 </section>
+
 <section id="contact">
     <h1>Contact Me</h1>
 </section>
