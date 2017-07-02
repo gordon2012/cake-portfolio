@@ -29,23 +29,25 @@
 <section id="work">
     <h1>My Work</h1>
 
-    <div class="container-fluid r">
-        <div class="row projects b">
+    <div class="container-fluid">
+        <div class="row projects">
             <?php $projects = [
-                'Camper Leaderboard',
-                'Markdown Previewer',
-                'Calculator',
-                'Random Quote Machine',
-                'Wikipedia Search',
-                'Twitch.tv Status'];
+                'leaderboard' => 'Camper Leaderboard',
+                'markdown' => 'Markdown Previewer',
+                'calculator' => 'Calculator',
+                'quote' => 'Random Quote Machine',
+                'wikiviewer' => 'Wikipedia Viewer',
+                'twitch' => 'Twitch.tv Status'];
             ?>
-            <?php foreach($projects as $project): ?>
+            <?php foreach($projects as $project => $title): ?>
                 <div class="col-sm-12 col-md-6 col-lg-4 wrap">
-                    <div class="item panel">
-                        <img src="https://place-hold.it/800x600" alt="" class="img-responsive">
-                        <div class="overlay">
-                            <h3><?=$project?></h3>
-                        </div>
+                    <div class="item">
+
+                        <?= $this->Html->image($project.'.png', ['alt'=>'', 'class'=>'img-responsive']) ?>
+
+                        <a href="http://gordondoskas.com/<?= $project ?>" target="_blank" class="overlay">
+                            <h2><?=$title?></h2>
+                        </a>
                     </div>
                 </div>
             <?php endforeach ?>
