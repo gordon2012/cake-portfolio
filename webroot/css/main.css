@@ -1,24 +1,82 @@
-/* Debug */
-.r {
-    background-color: rgba(255,0,0,0.2);
-}
-.g {
-    background-color: rgba(0,255,0,0.2);
-}
-.b {
-    background-color: rgba(0,0,255,0.2);
-}
-.mb {
-    border: 3px solid magenta;
-}
-
-/* Reset */
+/* RESET */
 h1 {
     margin: 0;
     padding: 0;
 }
 
-/* Flex layout */
+
+/* COLOR */
+nav {
+    background-color: #1B5E20;
+}
+
+a.navbar-brand {
+    color: #E8F5E9;
+}
+a.navbar-brand:hover {
+    color: white;
+}
+
+a.navbar-btn {
+    color: #E8F5E9;
+    border-color: #A5D6A7;
+}
+a.navbar-btn:hover {
+    color: white;
+    border-color: #43A047;
+    background-color: #43A047;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    color: #1B5E20;
+}
+
+#about, #contact {
+    background-color: #E8F5E9;
+}
+#work {
+    background-color: #C8E6C9;
+}
+
+footer {
+    background-color: #1B5E20;
+}
+footer p {
+    color: #E8F5E9;
+}
+
+.label {
+    background: #43A047;
+}
+
+
+
+.projects .overlay:hover {
+    background-color: rgba(0,0,0,0.6);
+}
+.projects h2 {
+    color: white;
+}
+
+
+/* FONT */
+.copy p {
+    font-size: 1.5em;
+}
+section h1 {
+    text-align: center;
+}
+
+
+/* LAYOUT */
+section {
+    min-height: 110vh;
+}
+section h1 {
+    padding-top: 50px;
+}
+
+/* Flex */
 body {
     display: flex;
     flex-direction: column;
@@ -29,10 +87,6 @@ main {
 }
 
 /* Header and Footer */
-header, footer, header>h3 {
-    background: #2f2f2f;
-    color: whitesmoke;
-}
 footer {
     padding: 20px;
 }
@@ -43,25 +97,6 @@ nav {
 }
 nav .container {
     padding: 15px 0;
-}
-
-section {
-    min-height: 110vh;
-}
-#about, #contact {
-    background-color: rgba(0,0,0,0.1);
-}
-#work {
-    background-color: rgba(0,0,0,0.2);
-}
-
-/* New Styles */
-.copy p {
-    font-size: 1.5em;
-}
-section h1 {
-    text-align: center;
-    padding-top: 50px;
 }
 
 /* About Section */
@@ -111,14 +146,36 @@ section#about img {
     text-decoration: none;
 }
 .projects .overlay:hover {
-    background-color: rgba(0,0,0,0.6);
     cursor: pointer;
     text-align: center;
 }
 .projects h2 {
-    color: white;
     display: none;
 }
 .projects .overlay:hover h2 {
     display: block;
+}
+
+
+/* Debug */
+.r {
+    background-color: rgba(255,0,0,0.2);
+}
+.g {
+    background-color: rgba(0,255,0,0.2);
+}
+.b {
+    background-color: rgba(0,0,255,0.2);
+}
+.rb {
+    border: 3px solid red;
+}
+.gb {
+    border: 3px solid green;
+}
+.bb {
+    border: 3px solid blue;
+}
+.mb {
+    border: 3px solid magenta;
 }

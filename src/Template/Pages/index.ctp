@@ -18,7 +18,7 @@
             <?php $skills = ['HTML', 'CSS', 'JavaScript', 'Bootstrap', 'JQuery', 'React', 'Webpack', 'Git', 'CakePHP', 'MySQL', 'MongoDB', 'Wordpress']; ?>
 
             <?php foreach($skills as $skill): ?>
-                <div class="col-sm-4"><h2><span class="label label-danger" style="display: block"><?= $skill ?></span></h2></div>
+                <div class="col-sm-4"><h2><span class="label" style="display: block"><?= $skill ?></span></h2></div>
             <?php endforeach ?>
 
             <div class="clearfix"></div>
