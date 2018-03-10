@@ -23,7 +23,9 @@
     ['url'=>'calculator', 'title'=>'Calculator', 'repo'=>'https://github.com/gordon2012/calculator'],
     ['url'=>'quote', 'title'=>'Random Quote Machine', 'repo'=>'https://github.com/gordon2012/quote'],
     ['url'=>'wikiviewer', 'title'=>'Wikipedia Viewer', 'repo'=>'https://github.com/gordon2012/wikiviewer'],
-    ['url'=>'twitch', 'title'=>'Twitch.tv Status', 'repo'=>'https://github.com/gordon2012/twitch']
+    ['url'=>'twitch', 'title'=>'Twitch.tv Status', 'repo'=>'https://github.com/gordon2012/twitch'],
+    ['url'=>'roll-a-ball', 'title'=>'Roll A Ball', 'repo'=>'https://github.com/gordon2012/roll-a-ball'],
+    ['url'=>'space-shooter', 'title'=>'Space Shooter', 'repo'=>'https://github.com/gordon2012/space-shooter'],
 ]; ?>
 <section id="work">
     <div>
@@ -35,7 +37,7 @@
                     <div class="work-projects-inner" style="background-image: url(<?= $this->Url->image($project['url'] . '.png') ?>);">
                         <div class="work-modal">
                             <div class="work-link">
-                                <a href="http://gordondoskas.com/<?= $project['url'] ?>" target="_blank">
+                                <a href="http://<?= $project['url'] ?>.gordondoskas.com/" target="_blank">
                                     <i class="fa fa-5x fa-search"></i>
                                 </a>
                             </div>
