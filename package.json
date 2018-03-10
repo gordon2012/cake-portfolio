@@ -7,7 +7,7 @@
     "test": "tests"
   },
   "scripts": {
-    "dev": "browser-sync start --no-notify -p \"localhost/cake-portfolio\" -f \"src\" \"webroot\" \"config\"",
+    "dev": "browser-sync start --no-notify -p \"localhost/portfolio\" -f \"src\" \"webroot\" \"config\"",
     "db" : "mysql -u root cake-portfolio",
     "ssh": "ssh hg"
   },
