@@ -1,0 +1,99 @@
+/* Reset */
+body {
+    margin: 0;
+}
+
+/* Base tag styles */
+a {
+    text-decoration: none;
+}
+
+/* Base section styles */
+header {
+    background: #333;
+    color: white;
+    padding: 1em;
+}
+header a {
+    color: white;
+    vertical-align: middle;
+}
+.link {
+    border: 1px solid white;
+    border-radius: 0.25em;
+    font-size: 1.1em;
+    padding: 0.3em 0;
+}
+.link:focus,
+.link:hover {
+    background: white;
+    color: #333;
+}
+.brand {
+    font-size: 2em;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 1em;
+}
+footer a {
+    color: white;
+}
+
+/* Base mobile layout */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    text-align: center;
+}
+nav a {
+    display: block;
+}
+.link {
+    margin: 1em;
+}
+.link:last-child {
+    margin-bottom: 0.5em;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    text-align: center;
+}
+.copyright {
+    padding-bottom: 1em;
+}
+.social a {
+    padding: 0 1em;
+    line-height: 1.5em;
+    margin-bottom: 1em;
+}
+
+/* Base grid layout */
+@supports(grid-area: auto) {
+    @media screen and (min-width: 40em) {
+        .link {
+            margin: 0 !important;
+        }
+        nav {
+            display: grid;
+            align-items: center;
+            grid-gap: 2em;
+            grid-template-columns: min-content;
+            grid-auto-flow: column;
+        }
+    }
+}
+
+/* WORK PAGE */
+
+/* CONTACT PAGE */
