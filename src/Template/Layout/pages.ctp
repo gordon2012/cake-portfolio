@@ -19,9 +19,7 @@
         </nav>
     </header>
 
-    <main>
-        <?= $this->fetch('content') ?>
-    </main>
+    <?= $this->fetch('content') ?>
 
     <?php $socials = [
         ['display'=>'<i class="fa fa-github"></i>', 'url'=>'https://github.com/gordon2012'],

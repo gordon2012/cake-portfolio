@@ -2,7 +2,9 @@
     $this->assign('title', 'Gordon Doskas | Portfolio - Work');
 ?>
 
-<h1 style="text-align: center;">Work</h1>
+<main class="work">
+    <h1 style="text-align: center;">Work</h1>
+</main>
 
 <?php if(false): ?>
 <section id="about">
