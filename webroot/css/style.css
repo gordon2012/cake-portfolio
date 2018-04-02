@@ -23,6 +23,22 @@ a {
     font-size: 1.1em;
 }
 
+.cta {
+    margin-bottom: 1em;
+}
+.cta a {
+    display: block;
+    border: 1px solid white;
+    padding: 1em;
+    color: white;
+    border-radius: 0.75em;
+    background: rgba(51,51,51,0.5);
+}
+.cta a:hover,
+.cta a:focus {
+    background: #333;
+}
+
 /* Base section styles */
 header {
     background: #333;
@@ -112,34 +128,23 @@ footer {
     }
 }
 
-/* ABOUT PAGE */
-.about {
+/* BASE PAGES */
+main {
     color: white;
     background: rgba(0,0,0,0.25);
     text-align: center;
     padding: 1em;
     margin-bottom: -1em;
+    background-size: cover;
+    background-position: center;
 }
+
+/* ABOUT PAGE */
 .about img {
     border: 1px solid white;
     box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.75);
     border-radius: 50%;
     height: 10em;
-}
-.cta {
-    margin-bottom: 1em;
-}
-.cta a {
-    display: block;
-    border: 1px solid white;
-    padding: 1em;
-    color: white;
-    border-radius: 0.75em;
-    background: rgba(51,51,51,0.5);
-}
-.cta a:hover,
-.cta a:focus {
-    background: #333;
 }
 
 /* About Page Grid Layout */
@@ -180,5 +185,149 @@ footer {
 }
 
 /* WORK PAGE */
+.work h1 {
+    padding: 1em;
+}
+.project {
+    max-width: 50em;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    border: 2px solid white;
+    box-shadow: 2px 2px 10px 1px rgba(0,0,0,0.75);
+    background: white;
+}
+.caption {
+    margin: 0;
+    padding: 1em;
+    background: rgba(0,0,0,0.75);
+    color: white;
+}
+.project img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.project-copy {
+    background: rgba(0,0,0,0.75);
+    color: white;
+    text-align: left;
+    padding: 1em 0.5em 0 0.5em;
+}
+.project-copy p {
+    margin: 0;
+    padding-bottom: 1em;
+}
+
+.project-btn {
+    background: rgba(0,0,0,0.75);
+    padding: 0.5em 1em;
+}
+.project-btn a {
+    display: block;
+    padding: 0.25em;
+    border: 2px solid white;
+    border-radius: 1em;
+    color: white;
+    font-size: 2em;
+}
+.project-btn a:hover,
+.project-btn a:focus {
+    background: white;
+    color: black;
+}
+
+/* Work Page Grid Layout */
+@supports(grid-area: auto) {
+    @media screen and (min-width: 40em) {
+        .work {
+            padding: 2em;
+            padding-top: 0;
+            padding-bottom: 3em;
+        }
+        .projects {
+            display: grid;
+            grid-gap: 2em;
+            grid-auto-flow: row dense;
+       }
+        .project {
+            margin: 0;
+            display: grid;
+        }
+        .caption,
+        .project-btn {
+            z-index: 1;
+        }
+        .project-copy,
+        .project-btn {
+            display: none;
+        }
+        .caption {
+            padding: 0.25em;
+        }
+        .project-btn {
+            padding: 0.5em;
+        }
+        .project-btn a {
+            padding: 0;
+        }
+
+        .project {
+            grid-template-areas:
+                "ti  ti ti ti"
+                ".   .  .  ."
+                ".   .  .  ."
+                ".   .  .  ."
+        }
+        .caption   { grid-area: ti; }
+        .project img {
+            grid-column: 1 / span 4;
+            grid-row: 1 /span 4;
+        }
+        .selected {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+
+        .selected .caption {
+            font-size: 2em;
+            padding-top: 1em;
+        }
+        .selected .project-copy {
+            padding: 0 2em;
+            font-size: 1.1em;
+            display: block;
+        }
+        .selected .project-btn {
+            display: block;
+        }
+        .selected.project {
+            grid-template-rows: 1fr 1fr 1fr min-content;
+            grid-template-areas:
+                "ti ti ti ti"
+                "co  co co co"
+                "co  co co co"
+                "b1 b1 b2 b2"
+        }
+        .selected .project-copy { grid-area: co; }
+        .selected .project-btn1 { grid-area: b1; }
+        .selected .project-btn2 { grid-area: b2; }
+    }
+
+    @media screen and (min-width: 40em) {
+        .projects {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media screen and (min-width: 50em) {
+        .projects {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+    @media screen and (min-width: 60em) {
+        .projects {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+}
 
 /* CONTACT PAGE */
