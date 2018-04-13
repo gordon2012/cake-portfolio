@@ -346,3 +346,7 @@ main {
 }
 
 /* CONTACT PAGE */
+
+.contact-form {
+    border: 5px solid red;
+}
