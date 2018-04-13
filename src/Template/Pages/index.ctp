@@ -15,18 +15,24 @@
     <img src="https://avatars3.githubusercontent.com/u/9071982?v=3&s=460" alt="Gordon Doskas">
 
     <h2>Front End Web Developer</h2>
-    <h3 class="gamedev">Indie Game Developer</h3>
+    <h3 class="gamedev">Independent Game Developer</h3>
     <h3 class="dreams">Oneironautical Adventurer</h3>
 
     <div class="copy">
         <p>
-            I am a Front End Web Developer at Salt Creek Media Inc. Most of my time is spent building landing pages and adding features to web applications using fundamental technologies such as HTML, JavaScript, PHP, and CSS, as well as frameworks like CakePHP, Bootstrap, and JQuery. I exclusively employ version control using Git and GitHub, and participate in daily Scrum stand up meetings.
+            I am a Front End Web Developer at Salt Creek Media Inc.
         </p>
         <p>
-            I have also learned other front end technologies that I have used in my many side projects such as React, Redux, SASS, npm, Gulp, and Webpack, and more.
+            When I'm not building marketing landing pages for clients, I can be found adding features to our many web applications.
         </p>
         <p>
-            I have completed my B.S. degree in IT: Software Engineering and am currently participating in a self-paced Full Stack Web Development certificate program.
+            I often work with fundamental technologies such as HTML, JavaScript, PHP, and CSS, in addition to frameworks and libraries including CakePHP, Bootstrap, and JQuery. I exclusively employ version control using Git and GitHub, and participate in Scrum stand up meetings.
+        </p>
+        <p>
+            I have also learned other front end technologies that I have used in my many side projects such as React, Redux, SASS, npm, Gulp, Webpack, and more.
+        </p>
+        <p>
+            I am also an aspiring Video Game Developer. I have dabbled in many game creation technologies such as Unity 3D, Unreal, Phaser.io, and GameMaker. I am currently in the planning phase of my very first game: an evolution based side scrolling platformer starring two lucid dreaming Italian Greyhounds.
         </p>
     </div>
 

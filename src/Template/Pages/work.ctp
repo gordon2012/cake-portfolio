@@ -38,7 +38,7 @@
             'image'=>'markdown.png',
             'repo'=>'https://github.com/gordon2012/markdown',
             'copy'=> [
-                'A live, styled markdown editor.',
+                'A live, styled markdown editor. As a user types markdown into the text box on the left, the output area on the right is styled appropriately in real time.',
                 'Technologies used: React, Marked, Webpack.',
             ]
         ],
@@ -78,7 +78,8 @@
             'image'=>'roll-a-ball.png',
             'repo'=>'https://github.com/gordon2012/roll-a-ball',
             'copy'=> [
-                'A Unity3D tutorial.',
+                'A simple demo, the player controls a ball in a third person view and is able to collect spinning cubes. The play area is confined by four walls.',
+                'Technologies used: Unity 3D'
             ]
         ],
         [
@@ -87,9 +88,32 @@
             'image'=>'space-shooter.png',
             'repo'=>'https://github.com/gordon2012/space-shooter',
             'copy'=> [
-                'A Unity3D tutorial.',
+                'A simple demo, the player controls a space ship in a top down vertically scrolling area of space. Enemy ships and asteroids appear in waves and are able to be dodged or fired at.',
+                'Technologies used: Unity 3D'
             ]
         ],
+        [
+            'title'=>'Pixel Art Maker',
+            'url'=>'http://pixel-art-maker.gordondoskas.com',
+            'image'=>'pixel-art-maker.png',
+            'repo'=>'https://github.com/gordon2012/udacity-pixel-art-maker',
+            'copy'=> [
+                'A simple pixel based image editor, a user can change the grid size, select a color, and draw on the canvas.',
+                'Technologies used: HTML, CSS, JavaScript'
+            ]
+        ],
+        [
+            'title'=>'PURLs',
+            'url'=>'https://leadmanager.saltcreekmedia.com/templates/welcomeExample/5abe9e5f103fb41c7c647ca7',
+            'image'=>'purls.png',
+            'repo'=>false,
+            'copy'=> [
+                'PURLs, or Personalized URLs, are marketing landing pages used in conjunction with direct mail to identify and collect information from potential leads.',
+                'At Salt Creek Media, we have a host of ready made templates that our clients choose from, many of which I have created. We also create custom pages for them, and I have created many of those as well.',
+                'Technologies used: CakePHP, CSS, Bootstrap, JQuery'
+            ]
+        ],
+
     ]; ?>
     <div class="projects">
         <?php foreach($projects as $project): ?>
@@ -103,14 +127,24 @@
                 </div>
                 <div class="project-btn project-btn1">
                     <a href="<?= $project['url'] ?>" target="_blank">
-                        <i class="fa fa-search"></i>
+                        <i class="fa fa-external-link"></i>
                     </a>
                 </div>
-                <div class="project-btn project-btn2">
-                    <a href="<?= $project['repo'] ?>" target="_blank">
-                        <i class="fa fa-github"></i>
-                    </a>
-                </div>
+
+                <?php if($project['repo']): ?>
+                    <div class="project-btn project-btn2">
+                        <a href="<?= $project['repo'] ?>" target="_blank">
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                <?php else: ?>
+                    <div class="project-btn project-btn2 repo-btn-locked">
+                        <a title="Private Codebase">
+                            <i class="fa fa-lock"></i>
+                        </a>
+                    </div>
+                <?php endif; ?>
+
             </div>
         <?php endforeach; ?>
     </div>
@@ -119,7 +153,6 @@
 <script>
     $(() => {
         $('.project').click(function(evt) {
-            console.log(this);
             $('.project').removeClass('selected');
             $(this).addClass('selected');
         });
