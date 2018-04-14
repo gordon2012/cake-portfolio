@@ -10,63 +10,74 @@
     }
 </style>
 
-
 <main class="contact">
     <h1 style="text-align: center;">Contact Me</h1>
 
-
     <div class="contact-form">
-
-        <?= $this->Form->create(false, ['url' => 'javascript: postToGoogle()']) ?>
-
-        <!-- <form id="form" target="_self" onsubmit="" action="javascript: postToGoogle()"> -->
-
-            <?= $this->Form->input('name', ['label' => 'Name']) ?>
-            <?= $this->Form->input('email', ['label' => 'Email', 'type' => 'email']) ?>
-            <?= $this->Form->input('message', ['label' => 'Message', 'type' => 'textarea']) ?>
-
-
-
-            <div style="width: 100%; display: block; float: left;">
-                <button id="send" type="submit">
-                Send
-                </button>
-                <?= $this->Form->input('last', ['label' => 'Newsletter', 'type' => 'checkbox']) ?>
-            </div>
-        <!-- </form> -->
-
-        <?= $this->Form->end() ?>
-
-
+        <?php
+            echo $this->Form->create(false, ['url' => 'javascript: postToGoogle()']);
+                $fields = [
+                    ['name'=>'name', 'label'=>'Name', 'type'=>'text', 'entry'=>'881776393'],
+                    ['name'=>'email', 'label'=>'Email', 'type'=>'email', 'entry'=>'191025622'],
+                    ['name'=>'message', 'label'=>'Message', 'type'=>'textarea', 'entry'=>'261514135'],
+                    // TODO: checkbox
+                    // ['name'=>'newsletter', 'label'=>'Subscribe to my Newsletter', 'type'=>'checkbox', 'entry'=>'59207987_sentinel59207987'],
+                ];
+                foreach($fields as $field) {
+                    $options = [
+                        'label' => $field['label'],
+                        'type' => $field['type'],
+                        'data-entry' => $field['entry'],
+                        'required' => 'required',
+                        'class' => 'input-field'
+                    ];
+                    // TODO: checkbox
+                    //
+                    // if($field['type'] != 'checkbox') {
+                    //     $options['required'] = 'required';
+                    // }
+                    echo $this->Form->input($field['name'], $options);
+                }
+                echo $this->Form->button('Submit');
+            echo $this->Form->end();
+        ?>
     </div>
 
-
-
-
-
+    <div class="contact-response" style="display: none;">
+        <div class="contact-spacer"></div>
+        <h2>Thank you!</h2>
+        <p>Your message has been received and I will get back to you as soon as I can.</p>
+    </div>
 </main>
 
 <script>
 function postToGoogle() {
-   var field1 = $("#first").val();
-   var field2 = $('#last').val();
+    // TODO: checkbox
+    // var test = $('.contact-form .input-field:not([type="checkbox"]), .contact-form .input-field[type="checkbox"]:checked');
 
-   $.ajax({
-     url: "https://docs.google.com/forms/d/e/1FAIpQLScNh0Jf3IM02qo5EfdpYFOYJi1BC4PGy4iZNBRv0k8eJ4o_8g/formResponse",
-     data: {
-       "entry.881776393": field1,
-       "entry.1699566414": field2
-     },
-     type: "POST",
-     dataType: "xml",
-     statusCode: {
-       0: function() {
-         //Success message
-       },
-       200: function() {
-         //Success Message
-       }
-     }
-   });
- }
+    var fields = $('.contact-form .input-field');
+    var data = {};
+    $.each(fields, function(i, e) {
+        var $e = $(e);
+        data[`entry.${$e.data('entry')}`] = $e.val();
+    });
+
+    $.ajax({
+        url: "https://docs.google.com/forms/d/e/1FAIpQLScNh0Jf3IM02qo5EfdpYFOYJi1BC4PGy4iZNBRv0k8eJ4o_8g/formResponse",
+        data: data,
+        type: "POST",
+        dataType: "xml",
+        statusCode: {
+            0: response,
+            200: response
+        }
+    });
+}
+
+// Might be status 200, probably 0 because of CORS, do it either way
+//
+function response() {
+    $('.contact-form').hide();
+    $('.contact-response').show();
+}
 </script>

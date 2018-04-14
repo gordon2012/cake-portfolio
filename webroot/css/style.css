@@ -238,7 +238,6 @@ main {
 }
 
 .repo-btn-locked:hover a {
-    /* border: 5px solid red; */
     cursor: not-allowed;
 }
 
@@ -346,7 +345,46 @@ main {
 }
 
 /* CONTACT PAGE */
-
 .contact-form {
-    border: 5px solid red;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 2em;
+    padding: 1em;
+    padding-right: 1.2em;
+    background: rgba(255,255,255,0.75);
+    color: black;
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form textarea {
+    display: block;
+    width: 100%;
+    margin-top: 3px;
+}
+
+.contact-form .input {
+    margin-bottom: 1em;
+}
+
+.contact-form button {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    background: trasparent;
+    font-size: 1.2em;
+    width: 100%;
+}
+
+.contact-form button:hover,
+.contact-form button:focus {
+    background: black;
+    color: white;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 40em) {
+    .contact-spacer {
+        height: 25vh;
+    }
 }
